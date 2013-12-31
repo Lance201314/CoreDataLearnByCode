@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12F37" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Profession" representedClassName="Profession" syncable="YES">
+        <attribute name="cid" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="profession" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sno" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="profession" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Profession" inverseName="students" inverseEntity="Profession" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Profession" positionX="-3251" positionY="-52" width="128" height="88"/>
+        <element name="Student" positionX="-3618" positionY="-52" width="128" height="88"/>
+    </elements>
+</model>

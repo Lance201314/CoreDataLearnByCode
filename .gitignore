@@ -1,0 +1,9 @@
+# build directory
+build/*
+# temp file
+*~.nib
+*.swp
+#self define file
+.DS_Store
+
+
